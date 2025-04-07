@@ -64,9 +64,9 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				dev: {
-					"blue": "#0EA5E9",
-					"darkblue": "#1E3A8A",
-					"lightblue": "#BAE6FD",
+					"blue": "#FFDD00", // Changed blue to yellow (FFDD00)
+					"darkblue": "#FFC700", // Changed darkblue to darker yellow
+					"lightblue": "#FFF0A0", // Changed lightblue to light yellow
 					"gray": "#F1F5F9",
 					"dark": "#1A1F2C",
 					"darkcharcoal": "#221F26"

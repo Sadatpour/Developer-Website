@@ -68,7 +68,7 @@ const ProjectsSection = () => {
               </CardHeader>
               
               <CardContent className="flex-grow">
-                <p className="text-gray-600 mb-4">{project.description}</p>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mt-3">
                   {project.technologies.map((tech) => (
                     <Badge key={tech} variant="secondary">{tech}</Badge>

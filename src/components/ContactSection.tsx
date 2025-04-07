@@ -53,7 +53,7 @@ const ContactSection = () => {
         
         <div className="grid md:grid-cols-2 gap-12">
           <div className="space-y-8">
-            <p className="text-gray-700 mb-6">
+            <p className="text-gray-700 dark:text-gray-300 mb-6">
               I'm currently open to freelance opportunities and interesting projects. 
               If you have a project that needs some creative work, feel free to reach out!
             </p>
@@ -64,8 +64,8 @@ const ContactSection = () => {
                   <Mail className="text-dev-blue" size={24} />
                 </div>
                 <div>
-                  <p className="font-semibold">Email</p>
-                  <a href="mailto:hello@example.com" className="text-gray-600 hover:text-dev-blue transition-colors">
+                  <p className="font-semibold dark:text-white">Email</p>
+                  <a href="mailto:hello@example.com" className="text-gray-600 dark:text-gray-400 hover:text-dev-blue transition-colors">
                     hello@example.com
                   </a>
                 </div>
@@ -76,8 +76,8 @@ const ContactSection = () => {
                   <Phone className="text-dev-blue" size={24} />
                 </div>
                 <div>
-                  <p className="font-semibold">Phone</p>
-                  <a href="tel:+1234567890" className="text-gray-600 hover:text-dev-blue transition-colors">
+                  <p className="font-semibold dark:text-white">Phone</p>
+                  <a href="tel:+1234567890" className="text-gray-600 dark:text-gray-400 hover:text-dev-blue transition-colors">
                     +1 (234) 567-890
                   </a>
                 </div>
@@ -88,8 +88,8 @@ const ContactSection = () => {
                   <MapPin className="text-dev-blue" size={24} />
                 </div>
                 <div>
-                  <p className="font-semibold">Location</p>
-                  <p className="text-gray-600">San Francisco, CA</p>
+                  <p className="font-semibold dark:text-white">Location</p>
+                  <p className="text-gray-600 dark:text-gray-400">San Francisco, CA</p>
                 </div>
               </div>
             </div>
@@ -100,7 +100,7 @@ const ContactSection = () => {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm font-medium">
+                    <label htmlFor="name" className="text-sm font-medium dark:text-white">
                       Name
                     </label>
                     <Input
@@ -114,7 +114,7 @@ const ContactSection = () => {
                   </div>
                   
                   <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium">
+                    <label htmlFor="email" className="text-sm font-medium dark:text-white">
                       Email
                     </label>
                     <Input
@@ -130,7 +130,7 @@ const ContactSection = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <label htmlFor="subject" className="text-sm font-medium">
+                  <label htmlFor="subject" className="text-sm font-medium dark:text-white">
                     Subject
                   </label>
                   <Input
@@ -144,7 +144,7 @@ const ContactSection = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium">
+                  <label htmlFor="message" className="text-sm font-medium dark:text-white">
                     Message
                   </label>
                   <Textarea
