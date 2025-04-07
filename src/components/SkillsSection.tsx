@@ -1,95 +1,95 @@
 
-import { Check } from 'lucide-react';
+import React from 'react';
 import { Progress } from '@/components/ui/progress';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 const SkillsSection = () => {
-  const technicalSkills = [
-    { name: 'HTML5 & CSS3', proficiency: 95 },
-    { name: 'JavaScript (ES6+)', proficiency: 90 },
-    { name: 'TypeScript', proficiency: 85 },
-    { name: 'React', proficiency: 92 },
-    { name: 'Next.js', proficiency: 80 },
-    { name: 'Tailwind CSS', proficiency: 90 },
-    { name: 'Responsive Design', proficiency: 95 },
-    { name: 'Redux / Context API', proficiency: 85 },
+  const frontendSkills = [
+    { name: 'HTML', level: 95 },
+    { name: 'CSS/Sass', level: 90 },
+    { name: 'JavaScript', level: 90 },
+    { name: 'TypeScript', level: 85 },
+    { name: 'React', level: 90 },
+  ];
+
+  const backendSkills = [
+    { name: 'Node.js', level: 80 },
+    { name: 'Express', level: 75 },
+    { name: 'MongoDB', level: 70 },
+    { name: 'PostgreSQL', level: 65 },
+    { name: 'GraphQL', level: 60 },
   ];
 
   const tools = [
-    { name: 'Git & GitHub', proficiency: 90 },
-    { name: 'VS Code', proficiency: 95 },
-    { name: 'Webpack', proficiency: 78 },
-    { name: 'Docker', proficiency: 70 },
-    { name: 'Jest & Testing Library', proficiency: 80 },
-    { name: 'Figma', proficiency: 85 },
-    { name: 'Chrome DevTools', proficiency: 95 },
-    { name: 'npm / yarn / pnpm', proficiency: 90 },
-  ];
-
-  const softSkills = [
-    'Problem Solving',
-    'Communication',
-    'Teamwork',
-    'Attention to Detail',
-    'Time Management',
-    'Adaptability',
-    'User Empathy',
-    'Critical Thinking',
+    { name: 'Git/GitHub', level: 85 },
+    { name: 'Docker', level: 70 },
+    { name: 'AWS', level: 65 },
+    { name: 'CI/CD', level: 75 },
+    { name: 'Jest/Testing', level: 80 },
   ];
 
   return (
-    <section id="skills" className="py-20 bg-white">
+    <section id="skills" className="bg-gray-50 dark:bg-dev-darkcharcoal py-20">
       <div className="section-container">
-        <h2 className="section-title">My Skills</h2>
+        <h2 className="section-title dark:text-white">My Skills</h2>
         
-        <Tabs defaultValue="technical" className="w-full max-w-4xl mx-auto">
-          <TabsList className="grid w-full grid-cols-3 mb-12">
-            <TabsTrigger value="technical">Technical Skills</TabsTrigger>
-            <TabsTrigger value="tools">Tools & Platforms</TabsTrigger>
-            <TabsTrigger value="soft">Soft Skills</TabsTrigger>
-          </TabsList>
-          
-          <TabsContent value="technical" className="animate-fade-in-fast">
-            <div className="grid md:grid-cols-2 gap-x-12 gap-y-6">
-              {technicalSkills.map((skill) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-16">
+          {/* Frontend Skills */}
+          <div className="glass-card p-6 transform transition-transform hover:scale-105">
+            <h3 className="text-xl font-bold mb-6 text-center text-dev-blue dark:text-dev-lightblue">Frontend Development</h3>
+            <div className="space-y-6">
+              {frontendSkills.map((skill) => (
                 <div key={skill.name} className="space-y-2">
-                  <div className="flex justify-between">
-                    <p className="font-medium">{skill.name}</p>
-                    <p className="text-gray-500">{skill.proficiency}%</p>
+                  <div className="flex justify-between items-center">
+                    <span className="font-medium dark:text-gray-300">{skill.name}</span>
+                    <span className="text-sm text-gray-600 dark:text-gray-400">{skill.level}%</span>
                   </div>
-                  <Progress value={skill.proficiency} className="h-2 bg-gray-200" indicatorClassName="bg-dev-blue" />
+                  <Progress 
+                    value={skill.level} 
+                    className="h-2 bg-gray-200 dark:bg-gray-700" 
+                  />
                 </div>
               ))}
             </div>
-          </TabsContent>
+          </div>
           
-          <TabsContent value="tools" className="animate-fade-in-fast">
-            <div className="grid md:grid-cols-2 gap-x-12 gap-y-6">
-              {tools.map((tool) => (
-                <div key={tool.name} className="space-y-2">
-                  <div className="flex justify-between">
-                    <p className="font-medium">{tool.name}</p>
-                    <p className="text-gray-500">{tool.proficiency}%</p>
+          {/* Backend Skills */}
+          <div className="glass-card p-6 transform transition-transform hover:scale-105">
+            <h3 className="text-xl font-bold mb-6 text-center text-dev-blue dark:text-dev-lightblue">Backend Development</h3>
+            <div className="space-y-6">
+              {backendSkills.map((skill) => (
+                <div key={skill.name} className="space-y-2">
+                  <div className="flex justify-between items-center">
+                    <span className="font-medium dark:text-gray-300">{skill.name}</span>
+                    <span className="text-sm text-gray-600 dark:text-gray-400">{skill.level}%</span>
                   </div>
-                  <Progress value={tool.proficiency} className="h-2 bg-gray-200" indicatorClassName="bg-dev-blue" />
+                  <Progress 
+                    value={skill.level} 
+                    className="h-2 bg-gray-200 dark:bg-gray-700" 
+                  />
                 </div>
               ))}
             </div>
-          </TabsContent>
+          </div>
           
-          <TabsContent value="soft" className="animate-fade-in-fast">
-            <div className="grid md:grid-cols-2 gap-x-12 gap-y-4">
-              {softSkills.map((skill) => (
-                <div key={skill} className="flex items-center gap-2">
-                  <div className="bg-dev-blue/10 p-1 rounded-full">
-                    <Check size={16} className="text-dev-blue" />
+          {/* Tools and Technologies */}
+          <div className="glass-card p-6 transform transition-transform hover:scale-105">
+            <h3 className="text-xl font-bold mb-6 text-center text-dev-blue dark:text-dev-lightblue">Tools & Technologies</h3>
+            <div className="space-y-6">
+              {tools.map((skill) => (
+                <div key={skill.name} className="space-y-2">
+                  <div className="flex justify-between items-center">
+                    <span className="font-medium dark:text-gray-300">{skill.name}</span>
+                    <span className="text-sm text-gray-600 dark:text-gray-400">{skill.level}%</span>
                   </div>
-                  <p>{skill}</p>
+                  <Progress 
+                    value={skill.level} 
+                    className="h-2 bg-gray-200 dark:bg-gray-700" 
+                  />
                 </div>
               ))}
             </div>
-          </TabsContent>
-        </Tabs>
+          </div>
+        </div>
       </div>
     </section>
   );
