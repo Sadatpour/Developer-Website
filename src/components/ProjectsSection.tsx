@@ -48,9 +48,9 @@ const ProjectsSection = () => {
   const [visibleProjects, setVisibleProjects] = useState(3);
 
   return (
-    <section id="projects" className="py-20 bg-gray-50">
+    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="section-container">
-        <h2 className="section-title">My Projects</h2>
+        <h2 className="section-title dark:text-black">My Projects</h2>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.slice(0, visibleProjects).map((project) => (

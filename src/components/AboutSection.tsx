@@ -4,22 +4,22 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-white dark:bg-gray-900">
       <div className="section-container">
-        <h2 className="section-title">About Me</h2>
+        <h2 className="section-title dark:text-black">About Me</h2>
         
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
               I'm a passionate frontend developer with 5 years of experience building modern web applications. 
               I specialize in React, TypeScript, and modern CSS techniques including Tailwind CSS.
             </p>
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
               My journey in web development started at the University of Technology where I earned my 
               Bachelor's degree in Computer Science. Since then, I've worked with startups and established 
               companies to create beautiful, functional interfaces that users love.
             </p>
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
               When I'm not coding, you can find me exploring new technologies, contributing to open-source 
               projects, or sharing my knowledge through blog posts and community events.
             </p>

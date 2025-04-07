@@ -47,9 +47,9 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-50">
+    <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="section-container">
-        <h2 className="section-title">Get In Touch</h2>
+        <h2 className="section-title dark:text-black">Get In Touch</h2>
         
         <div className="grid md:grid-cols-2 gap-12">
           <div className="space-y-8">

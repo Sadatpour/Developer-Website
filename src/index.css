@@ -115,6 +115,10 @@
     @apply text-3xl md:text-4xl font-bold mb-10 text-center relative;
   }
 
+  .dark .section-title {
+    @apply text-black;
+  }
+
   .section-title::after {
     content: "";
     @apply absolute left-1/2 bottom-0 w-20 h-1 bg-dev-blue -translate-x-1/2 -bottom-3;
@@ -131,3 +135,4 @@ html {
   padding: 0;
   text-align: left;
 }
+
