@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,12 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				dev: {
+					"blue": "#0EA5E9",
+					"darkblue": "#1E3A8A",
+					"lightblue": "#BAE6FD",
+					"gray": "#F1F5F9"
 				}
 			},
 			borderRadius: {
@@ -84,11 +91,42 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					from: { 
+						opacity: '0',
+						transform: 'translateY(10px)' 
+					},
+					to: { 
+						opacity: '1',
+						transform: 'translateY(0)' 
+					},
+				},
+				'slide-in': {
+					from: { 
+						transform: 'translateX(-100%)' 
+					},
+					to: { 
+						transform: 'translateX(0)' 
+					},
+				},
+				'typing': {
+					from: { width: '0' },
+					to: { width: '100%' },
+				},
+				'blink': {
+					'0%, 100%': { borderColor: 'transparent' },
+					'50%': { borderColor: 'hsl(var(--primary))' },
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.7s ease-out',
+				'fade-in-fast': 'fade-in 0.3s ease-out',
+				'slide-in': 'slide-in 0.7s ease-out',
+				'typing': 'typing 3.5s steps(40, end)',
+				'blink': 'blink 1s step-end infinite',
 			}
 		}
 	},
